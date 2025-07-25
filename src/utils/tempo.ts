@@ -7,3 +7,13 @@ export function horarioAtual(){
 
     return [hora_atual, minuto_atual, segundo_atual];
 }
+
+export function dataAtual(){
+    var data_atual = new Date();
+
+    var dia_atual = data_atual.getDate().toString().padStart(2, '0');
+    var mes_atual = (data_atual.getMonth() + 1).toString().padStart(2, '0');
+    var ano_atual = data_atual.getFullYear().toString().padStart(4, '0');
+
+    return[dia_atual, mes_atual, ano_atual];
+}
